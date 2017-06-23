@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/addcat', 'CatController@getAdd');
+
+Route::post('/addcat', 'CatController@addCat');
