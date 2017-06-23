@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/addcat', 'CatController@getAdd');
 
 Route::post('/addcat', 'CatController@addCat');
+
+Route::get('/post/add', 'CatController@getPost');
+
+Route::post('/post/add', 'CatController@addPost');

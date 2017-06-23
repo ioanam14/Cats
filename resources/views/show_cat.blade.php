@@ -65,9 +65,9 @@
         </style>
     </head>
     <body>
-    {{ $cat['name'] }}
-    {{ $cat['race'] }}
-    <img src="{{ $cat['photo'] }}">
+        {{ $cat['name'] }}
+        {{ $cat['race'] }}
+        <img src="{{ $cat['photo'] }}">
 
     </body>
 </html>

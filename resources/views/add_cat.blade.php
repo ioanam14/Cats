@@ -87,7 +87,7 @@
                 {{ Form::text('catrace', 'Munchkin') }}
                 {{ Form::text('photourl', 'http://www.iizcat.com/uploads/2017/06/hsx8h-gordon-ramsay-cat-2.JPG') }}
 
-                {{ Form::submit('Click Me!') }}
+                {{ Form::submit('Submit') }}
             </fieldset>
         {{ Form::close() }}
     </body>

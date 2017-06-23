@@ -23,4 +23,17 @@ class CatController extends BaseController
 
         return view('show_cat', compact('cat'));
     }
+
+    public function getPost ()
+    {
+        return view('post.add');
+    }
+
+    public function addPost (Request $request)
+    {
+        $post['title'] = $request->input('title');
+        $post['content'] = $request->input('content');
+
+        return view ('post.show', compact('post'));
+    }
 }
