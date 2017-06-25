@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Everything about cats!</title>
+        <title>Cats for adoption</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -65,29 +65,21 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Everything about cats!
-                </div>
-
-                <div class="links">
-                    <a href="/post/add">Posts</a>
-                    <a href="/adoption">Adoption</a>
-                    <a href="/addcat">Add your cat</a>
-                </div>
-            </div>
-        </div>
+        <center><h1> Cats for adoption</h1></center>
+        @foreach($cats as $cat)
+            <center>
+                <fieldset>
+                    {{ $cat['name'] }}
+                    <br>
+                    {{ $cat['race'] }}
+                    <br>
+                    {{ $cat['description'] }}
+                    <br>
+                    <img src="{{ $cat['photo'] }}">
+                    <br>
+                </fieldset>
+            </center>
+            <br>
+        @endforeach
     </body>
 </html>

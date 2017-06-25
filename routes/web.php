@@ -22,3 +22,9 @@ Route::post('/addcat', 'CatController@addCat');
 Route::get('/post/add', 'CatController@getPost');
 
 Route::post('/post/add', 'CatController@addPost');
+
+Route::get('/adoption', 'AdoptionController@index');
+
+Route::get('/adoption/add', 'AdoptionController@addCat');
+
+Route::post('/adoption/add', 'AdoptionController@postCat');

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Everything about cats!</title>
+        <title>Add cat</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -65,29 +65,19 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Everything about cats!
-                </div>
-
-                <div class="links">
-                    <a href="/post/add">Posts</a>
-                    <a href="/adoption">Adoption</a>
-                    <a href="/addcat">Add your cat</a>
-                </div>
-            </div>
-        </div>
+        {{ Form::open(['url' => '/adoption/add']) }}
+        <fieldset>
+            <legend>Add a cat for adoption:</legend>
+            {{ Form::text('name', 'Pookie') }}
+            <br>
+            {{ Form::text('race', 'British Munchkin') }}
+            <br>
+            {{ Form::textarea('description', 'Pookie is a Munchkin cat') }}
+            <br>
+            {{ Form::text('photo', 'http://assets6.heart.co.uk/2017/09/pooky-the-munchkin-2-1488301236-large-article-0.png') }}
+            <br>
+            {{ Form::submit('Add cat!') }}
+        </fieldset>
+        {{ Form::close() }}
     </body>
 </html>
