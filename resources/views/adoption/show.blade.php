@@ -22,25 +22,26 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+                text-align: center;
             }
         </style>
     </head>
     <body>
-        <center><h1> Cats for adoption</h1></center>
+        <h1> Cats for adoption</h1>
         @foreach($cats as $cat)
-            <center>
-                <fieldset>
-                    {{  $cat['name'] }}
-                    <br>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ $cat['name'] }}</h3>
+                </div>
+                <div class="panel-body">
                     {{ $cat['race'] }}
                     <br>
                     {{ $cat['description'] }}
                     <br>
-                    <img src="{{ $cat['photo'] }}">
+                    <img src="{{ $cat['photo'] }}" width="30%">
                     <br>
-                </fieldset>
-            </center>
-            <br>
+                </div>
+            </div>
         @endforeach
 
         {{ $cats->links() }}
