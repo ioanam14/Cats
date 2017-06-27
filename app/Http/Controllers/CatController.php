@@ -10,11 +10,6 @@ use Illuminate\Http\Request;
 
 class CatController extends BaseController
 {
-    public function getAdd ()
-    {
-        return view('add_cat');
-    }
-
     public function addCat(Request $request)
     {
         $cat['name'] = $request->input('catname');

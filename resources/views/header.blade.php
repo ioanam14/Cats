@@ -21,24 +21,17 @@
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
-                margin: 10px;
+                margin: 0;
                 text-align: center;
                 width: 90%;
                 margin-left: auto;
                 margin-right: auto;
             }
-
-            .foo {
-                width: 70%;
-                margin-bottom: 10px;
-                text-align: center;
-            }
-
         </style>
     </head>
 
     <body>
-        @yield('content')
+        @yield('header')
     </body>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
