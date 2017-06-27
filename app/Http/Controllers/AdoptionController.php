@@ -14,7 +14,7 @@ class AdoptionController extends Controller
     public function index()
     {
         // Select
-        $cats = AdoptionCatsModel::paginate(2);
+        $cats = AdoptionCatsModel::paginate(3);
 //        $cats = AdoptionCatsModel::where('id', '>', 1)->get()->toArray();
 //        $cats = AdoptionCatsModel::where('id', 1)->get()->toArray();
 
