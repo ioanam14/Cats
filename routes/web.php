@@ -15,9 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/post/add', 'CatController@getPost');
+Route::get('/post', 'PostController@index');
 
-Route::post('/post/add', 'CatController@addPost');
+Route::get('/post/add', 'PostController@getPost');
+
+Route::post('/post/add', 'PostController@addPost');
 
 Route::get('/adoption', 'AdoptionController@index');
 

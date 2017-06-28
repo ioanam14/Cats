@@ -28,7 +28,7 @@
                 margin-right: auto;
             }
 
-            .foo {
+            .form {
                 width: 70%;
                 margin-bottom: 10px;
                 text-align: center;

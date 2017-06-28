@@ -5,11 +5,11 @@
     <legend>Add a post about cats</legend>
     {{Form::label('title', 'Title for your post')}}
     <br>
-    {{ Form::text('title', null, array('placeholder'=>'Pookie', 'class' => 'foo')) }}
+    {{ Form::text('title', null, array('placeholder'=>'Pookie', 'class' => 'form')) }}
     <br>
     {{Form::label('content', 'The content for the post')}}
     <br>
-    {{ Form::textarea('content', null, array('placeholder'=>'Pookie is a lovely cat!', 'class' => 'foo')) }}
+    {{ Form::textarea('content', null, array('placeholder'=>'Pookie is a lovely cat!', 'class' => 'form')) }}
     <br>
     {{ Form::submit('Add post!') }}
     {{ Form::close() }}
