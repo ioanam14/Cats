@@ -26,3 +26,5 @@ Route::get('/adoption', 'AdoptionController@index');
 Route::get('/adoption/add', 'AdoptionController@addCat');
 
 Route::post('/adoption/add', 'AdoptionController@postCat');
+
+Route::get('/user/cat', 'UserController@showcat');

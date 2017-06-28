@@ -83,9 +83,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="/post/add">Posts</a>
+                    <a href="/post">Posts</a>
                     <a href="/adoption">Adoption</a>
-                    <a href="/addcat">Add your cat</a>
+                    <a href="/user/cat">View your cat</a>
                 </div>
             </div>
         </div>
