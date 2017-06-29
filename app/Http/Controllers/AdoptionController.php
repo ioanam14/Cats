@@ -8,6 +8,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Facades\Auth;
 
 class AdoptionController extends Controller
 {
@@ -39,7 +40,14 @@ class AdoptionController extends Controller
 
     public function addCat()
     {
-        return view('adoption/add');
+        $id = Auth::id();
+        if ($id)
+        {
+            return view('adoption/add');
+        }
+
+        return view('auth/login');
+
     }
 
     public function postCat(Request $request)
