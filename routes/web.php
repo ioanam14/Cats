@@ -28,3 +28,6 @@ Route::get('/adoption/add', 'AdoptionController@addCat');
 Route::post('/adoption/add', 'AdoptionController@postCat');
 
 Route::get('/user/cat', 'UserController@showcat');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
